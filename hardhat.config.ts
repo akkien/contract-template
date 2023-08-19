@@ -11,6 +11,7 @@ import "hardhat-abi-exporter";
 import "hardhat-contract-sizer";
 import "hardhat-finder";
 import "@dlsl/hardhat-gobind";
+import "@nomicfoundation/hardhat-foundry";
 
 import "./tasks/accounts";
 
@@ -50,7 +51,9 @@ const config: HardhatUserConfig = {
     },
     goerli: {
       url: process.env.GOERLI_URL || "",
-      accounts: [process.env.PRIVATE_KEY_DEV ? process.env.PRIVATE_KEY_DEV : ""],
+      accounts: [
+        process.env.PRIVATE_KEY_DEV ? process.env.PRIVATE_KEY_DEV : "",
+      ],
       timeout: 8000000,
       gasPrice: 20000000000, // 50 Gwei
     },
@@ -64,7 +67,9 @@ const config: HardhatUserConfig = {
     },
     devnet: {
       url: process.env.RPC_URL_DEV || "",
-      accounts: [process.env.PRIVATE_KEY_DEV ? process.env.PRIVATE_KEY_DEV : ""],
+      accounts: [
+        process.env.PRIVATE_KEY_DEV ? process.env.PRIVATE_KEY_DEV : "",
+      ],
       timeout: 8000000,
       gasPrice: 2000000000000, // 20 Gwei
     },

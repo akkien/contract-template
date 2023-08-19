@@ -100,3 +100,7 @@ scripts/test-verify.ts
 
 # subgraph
 generated
+
+# foundry
+out
+cache_forge
