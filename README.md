@@ -26,12 +26,16 @@ yarn slither
 
 ```sh
 yarn compile
+or
+forge build
 ```
 
 ### Test
 
 ```sh
 yarn test
+or
+forge test
 ```
 
 ### Deploy to network
